@@ -1,11 +1,12 @@
-import CreateComment from "./CreateComment";
+import CommentList from "./CommentList";
 
 const ListPosts = ({ posts }) => {
   const renderedPosts = Object.values(posts).map((post) => (
     <div key={post.id} className="card" style={{ width: "30%", marginBottom: "20px" }}>
       <div className="card-body">
         <h3>{post.title}</h3>
-        <CreateComment postId={post.id} />
+
+        <CommentList postId={post.id} />
       </div>
     </div>
   ));
